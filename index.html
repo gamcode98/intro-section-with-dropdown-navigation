@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body class="font-epilogue bg-almost-white">
+    <header
+      class="flex justify-between p-4 relative lg:p-8 lg:items-center lg:gap-11"
+    >
+      <img src="/logo.svg" alt="logo" />
+      <button class="lg:hidden">
+        <img id="open-menu" src="/icon-menu.svg" alt="" aria-hidden="true" />
+      </button>
+      <div
+        id="show-menu"
+        class="hidden bg-medium-gray-opacity fixed top-0 bottom-0 left-0 right-0 z-10 h-screen lg:flex lg:static lg:bg-almost-white lg:h-auto lg:w-full"
+      >
+        <div
+          class="bg-almost-white w-[60%] h-screen z-20 relative left-[40%] text-medium-gray p-4 lg:h-auto lg:static lg:flex lg:justify-between lg:w-full lg:p-0"
+        >
+          <ul class="lg:flex lg:items-center lg:justify-center lg:gap-11">
+            <button class="mb-4 relative -translate-x-7 left-full lg:hidden">
+              <img
+                src="/icon-close-menu.svg"
+                alt=""
+                aria-hidden="true"
+                id="close-menu"
+              />
+            </button>
+            <li class="mb-2 lg:mb-0 lg:relative">
+              <a
+                href="#"
+                class="flex items-center gap-2 mb-2 lg:mb-0 hover:text-almost-black"
+                id="first-dropdown"
+              >
+                <span> Features </span>
+                <img src="/icon-arrow.svg" alt="" aria-hidden="true" />
+              </a>
+              <ul
+                class="my-4 hidden lg:absolute lg:right-0 lg:shadow-xl lg:p-6 lg:bg-white lg:w-40 lg:rounded-md"
+              >
+                <li class="ml-6 mb-2 lg:ml-0">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 lg:gap-4 hover:text-almost-black"
+                  >
+                    <img src="/icon-todo.svg" alt="" aria-hidden="true" />
+                    <span>Todo List</span>
+                  </a>
+                </li>
+                <li class="ml-6 mb-2 lg:ml-0">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 lg:gap-4 hover:text-almost-black"
+                  >
+                    <img src="/icon-calendar.svg" alt="" aria-hidden="true" />
+                    <span>Calendar</span>
+                  </a>
+                </li>
+                <li class="ml-6 mb-2 lg:ml-0">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 lg:gap-4 hover:text-almost-black"
+                  >
+                    <img src="/icon-reminders.svg" alt="" aria-hidden="true" />
+                    <span>Reminders</span>
+                  </a>
+                </li>
+                <li class="ml-6 lg:ml-0">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 lg:gap-4 hover:text-almost-black"
+                  >
+                    <img src="/icon-planning.svg" alt="" aria-hidden="true" />
+                    <span>Planning</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="mb-2 lg:mb-0">
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-almost-black"
+                id="second-dropdown"
+              >
+                <span>Company</span>
+                <img src="/icon-arrow.svg" alt="" aria-hidden="true" />
+              </a>
+              <ul
+                class="my-4 hidden lg:absolute lg:shadow-xl lg:p-6 lg:bg-white lg:rounded-md"
+              >
+                <li class="ml-6 mb-2 lg:ml-0">
+                  <a href="#" class="hover:text-almost-black">History</a>
+                </li>
+                <li class="ml-6 mb-2 lg:ml-0">
+                  <a href="#" class="hover:text-almost-black">Ourt Team</a>
+                </li>
+                <li class="ml-6 mb-2 lg:ml-0">
+                  <a href="#" class="hover:text-almost-black">Blog</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mb-2 lg:mb-0">
+              <a href="#" class="hover:text-almost-black">Careers</a>
+            </li>
+            <li class="mb-4 lg:mb-0">
+              <a href="#" class="hover:text-almost-black">About</a>
+            </li>
+          </ul>
+          <ul class="lg:flex lg:items-center lg:justify-center lg:gap-11">
+            <li class="mb-4 text-center lg:mb-0">
+              <a href="#" class="hover:text-almost-black">Login</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-center border border-medium-gray p-2 rounded-lg lg:px-4 lg:rounded-2xl hover:text-almost-black hover:border-almost-black"
+                >Register
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="lg:flex lg:flex-row-reverse lg:w-5/6 lg:mx-auto lg:gap-16">
+      <picture class="mb-8 block lg:w-1/2">
+        <source media="(min-width:768px )" srcset="/image-hero-desktop.png" />
+        <source media="(min-width:375px )" srcset="/image-hero-mobile.png" />
+        <img src="/image-hero-mobile.png" alt="hero image" />
+      </picture>
+      <section class="lg:w-1/2 lg:flex lg:flex-col lg:justify-between">
+        <section
+          class="mb-8 lg:flex lg:flex-col lg:items-start lg:justify-center lg:gap-6 lg:h-4/6 lg:mt-16"
+        >
+          <h1
+            class="text-center text-3xl font-bold mb-4 lg:text-7xl lg:text-start"
+          >
+            <span class="lg:block">Make </span> remote work
+          </h1>
+          <p
+            class="text-medium-gray px-4 text-center mb-6 lg:text-start lg:px-0 lg:w-3/4"
+          >
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button
+            class="bg-almost-black text-almost-white font-bold px-4 py-2 rounded-2xl block mx-auto lg:mx-0 lg:py-4 lg:px-8 hover:text-almost-black hover:bg-almost-white border hover:border-almost-black"
+          >
+            Learn more
+          </button>
+        </section>
+        <section
+          id="client"
+          class="flex items-center justify-center gap-4 mb-8 md:gap-8 lg:justify-start"
+        ></section>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
