@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![solution](/solution.gif)
+![solution](/public/solution.gif)
 
 ### Links
 
